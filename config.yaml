@@ -1,0 +1,26 @@
+receivers:
+  # Can accept netflow, sflow, IPFIX
+  # Here it is configured for netflow
+  # Will listen for incoming data on 127.0.0.1:2055
+  # Full docs for this component
+  # https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/netflowreceiver
+  netflow:
+    scheme: netflow
+    port: 2055
+    sockets: 1
+    workers: 2
+
+exporters:
+  debug:
+    verbosity: detailed
+
+  otlphttp/dynatrace:
+    endpoint: "DT_ENDPOINT_PLACEHOLDER/api/v2/otlp"
+    headers:
+      Authorization: "Api-Token ${env:DT_API_TOKEN}"
+
+service:
+  pipelines:
+    logs:
+      receivers: [netflow]
+      exporters: [debug, otlphttp/dynatrace]
