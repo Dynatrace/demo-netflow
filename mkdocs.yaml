@@ -7,8 +7,7 @@ nav:
   - '3. Start Demo': 'start-demo.md'
   - '4. View Data': 'view-data.md'
   - '5. Cleanup': 'cleanup.md'
-  - "6. What's Next?": 'whats-next.md'
-  - '7. Resources': 'resources.md'
+  - '6. Resources': 'resources.md'
 theme:
   name: material
   custom_dir: docs/overrides
