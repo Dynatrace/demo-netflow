@@ -13,6 +13,11 @@ nflow-generator will be configured to send flow data to the Dynatrace collector.
 !!! info "More than just NetFlow"
     In this demo we use NetFlow data but the Dynatrace collector, and more specifically the [netflow receiver](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/netflowreceiver){target=_blank} inside the collector, also supports IPFIX and sFlow.
 
+!!! tip "Dynatrace Support"
+    The Dynatrace OpenTelemetry collector distribution is recommended as a best practice for any deployment involving OpenTelemetry.
+    
+    It is also fully supported meaning you can raise support tickets.
+
 ![architecture](images/netflow-arch-1.jpg)
 
 <div class="grid cards" markdown>

@@ -24,7 +24,6 @@ First, create a new docker network so both containers are on the same network an
 docker network create shared
 ```
 
-
 ## Start the Collector
 
 Start the collector by running the command as-is (leave this running):
@@ -33,13 +32,13 @@ Start the collector by running the command as-is (leave this running):
 docker run --rm -p 2055:2055 \
   -e DT_ENDPOINT=https://$DT_ENVIRONMENT_ID.live.dynatrace.com/api/v2/otlp \
   -e DT_API_TOKEN=$DT_API_TOKEN \
-  -v c:\temp\netflow:/app \
+  -v .:/app \
   --name dtcol \
   --network shared \
   ghcr.io/dynatrace/dynatrace-otel-collector/dynatrace-otel-collector:0.30.0 --config=app/config.yaml
 ```
 
-The configuration of the collector can be found [here](https://github.com/dynatrace/demo-netflow/config.yaml){target=_blank}.
+The configuration of the collector can be found [here](https://github.com/Dynatrace/demo-netflow/blob/main/config.yaml){target=_blank}.
 The collector is configured to listen for netflow data on `2055` then export it simultaneously to both `debug` and Dynatrace via the `OTLP HTTP` protocol. The debug output prints it to stdout (look at the collector terminal for output).
 
 !!! note "Remove debug in production"
