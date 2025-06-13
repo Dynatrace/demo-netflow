@@ -1,6 +1,8 @@
-# demo-netflow
-> WORK IN PROGRESS
-> This repo is still a work in progress. It is not yet stable.
-> This notice will be removed when it is ready for use.
+# Observability Lab: NetFlow Ingest
 
-Hands on Demo to ingest Netflow Data via the Dynatrace OpenTelemetry Collector
+Hands on Observability Lab showing how to generate and send NetFlow, sFlow and IPFIX data to Dynatrace.
+
+## >> [Start the Hands on Tutorial](https://dynatrace.github.io/demo-netflow)
+
+### Architecture
+![architecture](docs/images/netflow-arch-1.png)
