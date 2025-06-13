@@ -11,10 +11,10 @@ Provide the tenant URL, environment type and API token via the form. These will 
 
 ## Start the system
 
-You will now start two containers:
+You will now start two containers on the same Docker network:
 
-1. nflow-generator (this is the device which generates the dummy netflow data)
-1. Dynatrace OpenTelemetry collector (this listens for incoming NetFlow data and sends it onwards to Dynatrace)
+1. Dynatrace OpenTelemetry collector: Listens for incoming NetFlow data and sends it onwards to Dynatrace
+1. nflow-generator: Dummy device which generates the netflow data
 
 ### Create a new Network
 

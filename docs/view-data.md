@@ -2,6 +2,10 @@ It is time to view the data in Dynatrace.
 
 --8<-- "snippets/bizevent-view-data.js"
 
+!!! tip "Data Ingest"
+    It may take up to 30 seconds for data to appear in Dynatrace.
+    Just re-run the command below after a minute or so.
+
 In Dynatrace:
 
 * Press `ctrl + k` search for `notebooks`
