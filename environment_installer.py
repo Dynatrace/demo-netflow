@@ -1,6 +1,5 @@
 import os
 from utils import *
-import dotenv
 
 # CODESPACE_NAME = os.environ.get("CODESPACE_NAME", "")
 # GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")
