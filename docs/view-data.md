@@ -26,6 +26,8 @@ You have succesfully ingested NetFlow data into Dynatrace.
 
 This Observability lab is now complete.
 
+--8<-- "snippets/feedback-invitation.md"
+
 <div class="grid cards" markdown>
 - [Click here to cleanup your environment :octicons-arrow-right-24:](cleanup.md)
 </div>
