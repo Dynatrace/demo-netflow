@@ -27,7 +27,7 @@
         console.log("Sending bizevent now for: ", CURRENT_PAGE);
         console.log("Got here");
         console.log(rating, " // ", feedback);
-        dynatrace.sendBizEvent('feedback', {"page": CURRENT_PAGE, "testing": "true", "rating": rating, "feedback": feedback });
+        dynatrace.sendBizEvent('feedback', {"page": CURRENT_PAGE, "rating": rating, "feedback": feedback });
       }
       else {
         console.log("Missing data. Do not send feedback.")
