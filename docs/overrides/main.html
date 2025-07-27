@@ -25,7 +25,6 @@
       // Only send if at least a rating is available
       if (rating != "None") {
         console.log("Sending bizevent now for: ", CURRENT_PAGE);
-        console.log("Got here");
         console.log(rating, " // ", feedback);
         dynatrace.sendBizEvent('feedback', {"page": CURRENT_PAGE, "rating": rating, "feedback": feedback });
       }
