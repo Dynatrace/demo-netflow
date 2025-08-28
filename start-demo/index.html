@@ -658,8 +658,50 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <p>Click this button to launch the demo in a new tab.</p>
-<p>Provide the tenant URL, environment type and API token via the form. These will be encrypted and stored in GitHub. They will also automatically be set as environment variables in the codespace.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Run in Cloud</label><label for="__tabbed_1_2">Run Locally</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition info">
+<p class="admonition-title">Enter Required Information</p>
+<p>During the next step you will be prompted for some details.</p>
+<p>Enter the relevant details in the GitHub form.</p>
+</div>
+<p>Click this button to launch the demo in a new tab.</p>
 <p><a href="https://codespaces.new/dynatrace/demo-netflow" target="_blank"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Clone the repository to your local machine</li>
+</ul>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/dynatrace/demo-netflow
+</code></pre></div>
+<ul>
+<li>Open the folder in Visual Studio code</li>
+<li>Ensure the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers" target="_blank">Microsoft Dev Containers extension</a> and <a href="https://code.visualstudio.com/docs/devcontainers/devcontainer-cli#_installation" target="_blank">Dev Containers CLI</a> are installed in VSCode</li>
+<li>Open a new terminal in VSCode and set your environment variables as appropriate:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>set DT_ENVIRONMENT_ID=abc12345
+set DT_ENVIRONMENT_TYPE=live
+set DT_API_TOKEN=dt0c01.******.***********
+</code></pre></div>
+<ul>
+<li>Start Docker / Podman</li>
+<li>Create the environment</li>
+</ul>
+<div class="highlight"><pre><span></span><code>devcontainer up
+</code></pre></div>
+<p>It will take a few moments but you should see:</p>
+<div class="highlight"><pre><span></span><code>{&quot;outcome&quot;:&quot;success&quot;,&quot;containerId&quot;:&quot;...&quot;,&quot;remoteUser&quot;:&quot;root&quot;,&quot;remoteWorkspaceFolder&quot;:&quot;/workspaces/obslab-jmeter&quot;}
+</code></pre></div>
+<ul>
+<li>Connect to the demo environment. This will launch a new Visual Studio Code window</li>
+</ul>
+<div class="highlight"><pre><span></span><code>devcontainer open
+</code></pre></div>
+<p>In the new Visual Studio code window, open a new terminal and continue with the tutorial.</p>
+</div>
+</div>
+</div>
 <h2 id="start-the-system">Start the system<a class="headerlink" href="#start-the-system" title="Permanent link">#</a></h2>
 <p>You will now start two containers on the same Docker network:</p>
 <ol>
@@ -743,6 +785,8 @@ Flags: 0
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -774,7 +818,7 @@ Flags: 0
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
