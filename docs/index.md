@@ -3,6 +3,7 @@
 --8<-- "snippets/disclaimer.md"
 --8<-- "snippets/view-code.md"
 --8<-- "snippets/bizevent-homepage.js"
+--8<-- "snippets/select-execution-mode.md"
 
 This hands on Observability Lab will show how to ingest NetFlow data into Dynatrace as log entries via the [Dynatrace collector](https://docs.dynatrace.com/docs/extend-dynatrace/opentelemetry/collector){target=_blank}.
 

@@ -8,7 +8,7 @@ import json
 import hashlib
 from loguru import logger
 
-REPOSITORY_NAME = os.environ.get("RepositoryName", "")
+REPOSITORY_NAME = os.environ.get("RepositoryName", "demo-netflow")
 BASE_DIR = f"/workspaces/{REPOSITORY_NAME}"
 
 # GEOLOCATION_DEV = "GEOLOCATION-0A41430434C388A9"
@@ -39,7 +39,7 @@ COLLECTOR_WAIT_TIMEOUT_SECONDS = 30
 OPENTELEMETRY_COLLECTOR_ENDPOINT = "http://localhost:4318"
 CODESPACE_NAME = os.environ.get("CODESPACE_NAME")
 
-GITHUB_ORG_SLASH_REPOSITORY = os.environ.get("GITHUB_REPOSITORY") # eg. yourOrg/yourRepo
+GITHUB_ORG_SLASH_REPOSITORY = os.environ.get("GITHUB_REPOSITORY","dynatrace/demo-netflow") # eg. yourOrg/yourRepo
 GITHUB_REPO_NAME = os.environ.get("RepositoryName") # eg. mclass
 GITHUB_DOT_COM_REPO = f"https://github.com/{GITHUB_ORG_SLASH_REPOSITORY}.git"
 GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN = os.environ.get("GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN")

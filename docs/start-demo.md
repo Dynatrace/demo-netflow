@@ -5,9 +5,13 @@
 
 Click this button to launch the demo in a new tab.
 
-Provide the tenant URL, environment type and API token via the form. These will be encrypted and stored in GitHub. They will also automatically be set as environment variables in the codespace.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dynatrace/demo-netflow){target=_blank}
+=== "Run in Cloud"
+    --8<-- "snippets/codespace-details-warning-box.md"
+    --8<-- "snippets/start-demo-run-in-cloud.md"
+
+=== "Run Locally"
+    --8<-- "snippets/start-demo-run-locally.md"
 
 ## Start the system
 

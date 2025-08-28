@@ -1,12 +1,17 @@
 import os
 from utils import *
+import dotenv
 
-# CODESPACE_NAME = os.environ.get("CODESPACE_NAME", "")
-# GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")
-REPOSITORY_NAME = os.environ.get("RepositoryName", "")
+CODESPACE_NAME = os.environ.get("CODESPACE_NAME", "")
+GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")
 
 # Build DT environment URLs
-# DT_TENANT_APPS, DT_TENANT_LIVE = build_dt_urls(dt_env_id=DT_ENVIRONMENT_ID, dt_env_type=DT_ENVIRONMENT_TYPE)
+DT_TENANT_APPS, DT_TENANT_LIVE = build_dt_urls(dt_env_id=DT_ENVIRONMENT_ID, dt_env_type=DT_ENVIRONMENT_TYPE)
+
+# Write .env file
+# Required because user interaction needs DT_TENANT_LIVE during the tutorial
+# So we tell user to source .env
+dotenv.set_key(dotenv_path=".env", key_to_set="DT_URL", value_to_set=DT_TENANT_LIVE, export=True)
 
 # Do placeholder replacements
 # do_file_replace(pattern=f"/workspaces/{REPOSITORY_NAME}/config.yaml", find_string="DT_ENDPOINT_PLACEHOLDER", replace_string=DT_TENANT_LIVE, recursive=False)

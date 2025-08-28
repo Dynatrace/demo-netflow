@@ -20,6 +20,7 @@ https://abc12345.apps.dynatrace.com
 Make a note of your environment type. The above environment type is `live`. If in doubt, use `live`.
 
 ## Create API Token
+
 In Dynatrace:
 
 * Press `ctrl + k` and search for `access tokens`

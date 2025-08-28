@@ -14,7 +14,7 @@ In Dynatrace:
 
 ```{ "name": "fetch log line" }
 fetch logs
-| filter exists(content, "Log line")
+| filter exists(flow.type)
 ```
 
 ![dynatrace notebook netflow](images/dt-notebook-1.png)
